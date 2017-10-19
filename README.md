@@ -5,13 +5,13 @@ The scripts are to assist in deploying MediaWiki on AWS EC2 and RDS. Mediawiki d
 
 The deployment scripts create a complete dedicated VPC, and RDS service, S3 storage and the deployment in Elastic Beanstalk (EB).
 
-##Summary
+## Summary
 In the VPC 4 subnets are created and spread over 2 Availability Zones. 2 subnets are public internet facing and will be used by Elastic Beanstalk to deploy the Load Balancer and the web server instance(s). 2 subnets are private and used for RDS to provision the MySQL database. The source code is uploaded to S3 as zip file, EB is able to use this zip file on S3 to deploy the application in the instances it creates.
 
 See [Usage](#usage) to work with the scripts.
 
 
-##Implementation considerations
+## Implementation considerations
 
 ### Language: BASH
 The scripting language used is available on almost all UNIX, Linux and OS X hosts.
@@ -49,7 +49,7 @@ MediaWiki uses a LAMP stack (preferred) and I used the RDS service (single AZ) t
 `http://mywiki.us-east-1.elasticbeanstalk.com/mediawiki-1.27.3`. In many cases this is not the desired URL for public use. This involves additional DNS setup.
 
 
-##Testing
+## Testing
 
 The scripts were tested on **OS X** and on an **Amazon Linux AMI**, however the set up script for the MediaWiki deployment conveniently launches a browser to access MediaWiki from the script. This obviously doesn’t work on a remote server.
 Other then that the scripts run fine on Linux as well, with the exception that SED works a bit different on Linux vs OS X (and the script handles this).
@@ -118,7 +118,7 @@ There is a total of 3 scripts to set up a complete environment to run MediaWiki:
 
  Deletes the RDS instance as found in `db.conf`
 
-###MediaWiki notes:
+### MediaWiki notes:
 
 1) To use the wiki point a browser to main page of the wiki at
 `http://mywiki.us-east-1.elasticbeanstalk.com/mediawiki-1.27.3`. The directory name is the same name as the root directory name of the source code.
