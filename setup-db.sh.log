@@ -1,0 +1,74 @@
+{
+    "DBInstance": {
+        "PubliclyAccessible": false, 
+        "MasterUsername": "dbadmin", 
+        "MonitoringInterval": 0, 
+        "LicenseModel": "general-public-license", 
+        "VpcSecurityGroups": [
+            {
+                "Status": "active", 
+                "VpcSecurityGroupId": "sg-47ddbe3a"
+            }
+        ], 
+        "CopyTagsToSnapshot": false, 
+        "OptionGroupMemberships": [
+            {
+                "Status": "in-sync", 
+                "OptionGroupName": "default:mysql-5-7"
+            }
+        ], 
+        "PendingModifiedValues": {
+            "MasterUserPassword": "****"
+        }, 
+        "Engine": "mysql", 
+        "MultiAZ": false, 
+        "DBSecurityGroups": [], 
+        "DBParameterGroups": [
+            {
+                "DBParameterGroupName": "default.mysql5.7", 
+                "ParameterApplyStatus": "in-sync"
+            }
+        ], 
+        "AutoMinorVersionUpgrade": true, 
+        "PreferredBackupWindow": "06:16-06:46", 
+        "DBSubnetGroup": {
+            "Subnets": [
+                {
+                    "SubnetStatus": "Active", 
+                    "SubnetIdentifier": "subnet-f0a2c696", 
+                    "SubnetAvailabilityZone": {
+                        "Name": "us-west-2a"
+                    }
+                }, 
+                {
+                    "SubnetStatus": "Active", 
+                    "SubnetIdentifier": "subnet-460b8e0e", 
+                    "SubnetAvailabilityZone": {
+                        "Name": "us-west-2b"
+                    }
+                }
+            ], 
+            "DBSubnetGroupName": "mywiki-dev-db-subnet-gp", 
+            "VpcId": "vpc-9ae8b9fc", 
+            "DBSubnetGroupDescription": "db subnet grp for mywiki-dev", 
+            "SubnetGroupStatus": "Complete"
+        }, 
+        "ReadReplicaDBInstanceIdentifiers": [], 
+        "AllocatedStorage": 5, 
+        "DBInstanceArn": "arn:aws:rds:us-west-2:418667703862:db:mywiki-dev-db", 
+        "BackupRetentionPeriod": 1, 
+        "DBName": "mywikidevdb", 
+        "PreferredMaintenanceWindow": "wed:10:13-wed:10:43", 
+        "DBInstanceStatus": "creating", 
+        "IAMDatabaseAuthenticationEnabled": false, 
+        "EngineVersion": "5.7.17", 
+        "DomainMemberships": [], 
+        "StorageType": "gp2", 
+        "DbiResourceId": "db-6CUKXPMFLON7EQHTW4GHZDXL7U", 
+        "CACertificateIdentifier": "rds-ca-2015", 
+        "StorageEncrypted": false, 
+        "DBInstanceClass": "db.t2.micro", 
+        "DbInstancePort": 0, 
+        "DBInstanceIdentifier": "mywiki-dev-db"
+    }
+}
